@@ -1,0 +1,29 @@
+#### Example 1:
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <!-- After inputting 87 as the percentage-->
+    <color name="black_87">#DE000000</color><!-- black  with 87% opacity-->
+</resources>
+
+
+#### Example 2:
+
+<!-- After inputting 50 as the percentage-->
+```kotlin
+val textView = TextView(context)
+textView.setTextColor(Color.parseColor("#80000000"))
+textView.setTextColor(0X80000000)
+```
+
+
+#### Example 3:
+
+<!-- After inputting 10 as the percentage-->
+```xml
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="alpha-color"
+        android:textColor="#1A000000"/>
+```

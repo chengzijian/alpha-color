@@ -1,0 +1,25 @@
+#### Example 1:
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+</resources>
+
+
+#### Example 2:
+
+```kotlin
+val textView = TextView(context)
+textView.setTextColor(Color.parseColor("#000000"))
+textView.setTextColor(0XFF000000)
+```
+
+
+#### Example 3:
+
+```xml
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="alpha-color"
+        android:textColor="#000000"/>
+```

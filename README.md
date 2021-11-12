@@ -4,38 +4,90 @@
 [![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
 
-## Template ToDo list
-- [x] Create a new [IntelliJ Platform Plugin Template][template] project.
-- [ ] Get known with the [template documentation][template].
-- [ ] Verify the [pluginGroup](/gradle.properties), [plugin ID](/src/main/resources/META-INF/plugin.xml) and [sources package](/src/main/kotlin).
-- [ ] Review the [Legal Agreements](https://plugins.jetbrains.com/docs/marketplace/legal-agreements.html).
-- [ ] [Publish a plugin manually](https://plugins.jetbrains.com/docs/intellij/publishing-plugin.html?from=IJPluginTemplate) for the first time.
-- [ ] Set the Plugin ID in the above README badges.
-- [ ] Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html).
-- [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
+## Description
 
 <!-- Plugin description -->
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
+This is an android studio plugin that allows you to creates new color in hex format based on a percentage (0-100) and a
+base color you specify i.e. 
 
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
+#### Example 1:
 
-To keep everything working, do not remove `<!-- ... -->` sections. 
+```xml
+
+<color name="black">#000000</color>
+```
+
+when you supply **87** as the percentage, results in
+
+```xml
+
+<color name="black_87">#DE000000</color>
+```
+
+#### Example 2:
+
+```kotlin
+val textView = TextView(context)
+textView.setTextColor(Color.parseColor("#000000"))
+textView.setTextColor(0XFF000000)
+```
+
+when you supply **50** as the percentage, results in
+
+```kotlin
+val textView = TextView(context)
+textView.setTextColor(Color.parseColor("#80000000"))
+textView.setTextColor(0X80000000)
+```
+
+#### Example 3:
+
+```xml
+
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="alpha-color"
+        android:textColor="#000000"/>
+```
+
+when you supply **10** as the percentage, results in
+
+```xml
+
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="alpha-color"
+        android:textColor="#1A000000"/>
+```
+
 <!-- Plugin description end -->
+
+### Usage
+
+1. Hop over to your "color code" and press alt + cmd (on windows Enter).
+2. Click on `Generate alpha variant`.
+3. Key in the percentage and click OK
 
 ## Installation
 
 - Using IDE built-in plugin system:
-  
+
   <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "alpha-color"</kbd> >
   <kbd>Install Plugin</kbd>
-  
+
 - Manually:
 
-  Download the [latest release](https://github.com/chengzijian/alpha-color/releases/latest) and install it manually using
+  Download the [latest release](https://github.com/chengzijian/alpha-color/releases/latest) and install it manually
+  using
   <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
 
-
 ---
-Plugin based on the [IntelliJ Platform Plugin Template][template].
+
+- Plugin based on the [IntelliJ Platform Plugin Template][template].
+- Plugin based on the [alpha-bet][template2].
 
 [template]: https://github.com/JetBrains/intellij-platform-plugin-template
+
+[template2]: https://github.com/humblerookie/alpha-bet
