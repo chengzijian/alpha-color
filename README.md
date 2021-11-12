@@ -71,12 +71,12 @@ when you supply **10** as the percentage, results in
 3. Key in the percentage and click OK
 
 ## Installation
-
+<!--
 - Using IDE built-in plugin system:
 
   <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "alpha-color"</kbd> >
   <kbd>Install Plugin</kbd>
-
+-->
 - Manually:
 
   Download the [latest release](https://github.com/chengzijian/alpha-color/releases/latest) and install it manually
